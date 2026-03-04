@@ -1,17 +1,17 @@
 #array.py
 
 arr = list()
-n = int(input("Enter number of elements:"))
-print("Enter elements:")
-i = 0
-while (i<n):
-    tmp = int(input(""))
-    arr.append(tmp)
-    i+=1
+n = int(input('Enter number of elements (1-15):'))
+while 0 >= n or 16 <= n:
+    n = int(input('Wrong input. Enter number of elements (1-15):'))
 
-print("Array:")
-i = 0
-while (i<n):
+for i in range(n):
+    tmp = input("Enter element: ")
+    while not tmp.isdigit():
+        tmp = input('Wrong input. Enter correct element (number): ')
+    arr.append(int(tmp))
+
+print('Array:')
+for i in range(n):
     print(arr[i], end = " ")
-    i+=1
-print("")
+print('Succesful!')
