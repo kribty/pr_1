@@ -14,4 +14,4 @@ for i in range(n):
 print('Array:')
 for i in range(n):
     print(arr[i], end = " ")
-print('Succesful!')
+print()
